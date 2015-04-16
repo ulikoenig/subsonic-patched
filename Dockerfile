@@ -55,4 +55,5 @@ EXPOSE	4040
 EXPOSE	9412
 
 ADD	https://github.com/ulikoenig/subsonic-patched/blob/master/start.sh /start.sh
+RUN	chmod a+x /start.sh
 CMD	["/start.sh"]
