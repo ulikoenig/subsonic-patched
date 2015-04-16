@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-#CMDBUILD	docker build -t ulikoenig/subsonic-patched docker build -t ulikoenig/subsonic-patch https://raw.githubusercontent.com/ulikoenig/subsonic-patched/master/Dockerfile
+#CMDBUILD	docker build -t ulikoenig/subsonic_patched https://raw.githubusercontent.com/ulikoenig/subsonic-patched/master/Dockerfile
 #CMDRUN		docker run -d --net=host -p 4040:4040 -p 9412:9412 -v /var/lib/subsonic:/data:rw -v /mnt/harddrive/Medien:/Medien:ro  ulikoenig/subsonic-patched
 
 MAINTAINER Uli König <docker@ulikoenig.de.nospam> (@u98)
