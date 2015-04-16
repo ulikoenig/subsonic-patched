@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 #CMDBUILD	docker build -t ulikoenig/subsonic_patched https://raw.githubusercontent.com/ulikoenig/subsonic-patched/master/Dockerfile
-#CMDRUN		docker run -d --net=host -p 4040:4040 -p 9412:9412 -v /var/lib/subsonic:/data:rw -v /mnt/harddrive/Medien:/Medien:ro  ulikoenig/subsonic-patched
+#CMDRUN		docker run -d --net=host -p 4040:4040 -p 9412:9412 -v /var/lib/subsonic:/data:rw -v /mnt/harddrive/Medien:/Medien:ro  ulikoenig/subsonic_patched
 
 MAINTAINER Uli König <docker@ulikoenig.de.nospam> (@u98)
 
@@ -54,6 +54,6 @@ VOLUME	["/Media"]
 EXPOSE	4040
 EXPOSE	9412
 
-ADD	https://github.com/ulikoenig/subsonic-patched/blob/master/start.sh /start.sh
+ADD	https://raw.githubusercontent.com/ulikoenig/subsonic-patched/master/start.sh /start.sh
 RUN	chmod a+x /start.sh
 CMD	["/start.sh"]
