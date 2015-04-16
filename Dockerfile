@@ -54,5 +54,5 @@ VOLUME	["/Media"]
 EXPOSE	4040
 EXPOSE	9412
 
-ADD	start.sh /start.sh
+ADD	https://github.com/ulikoenig/subsonic-patched/blob/master/start.sh /start.sh
 CMD	["/start.sh"]
