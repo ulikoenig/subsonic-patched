@@ -27,6 +27,9 @@ Please change this paths how you like it.
 
 The Parameter ``` "--net=host" ``` is important to give subsonic access to the real external IP. Without this, Sonos support will not work, even if ports are open, because subsonic tells Sonos to make calls to 172.xx.xx.xx IP-adresses.
 
+The Parameter ``` "--e LOCALIP=172.1.2.3" ``` can be used to set the IP manually, when the docker container is started.
+
+
 ## Finally:
 
 Open a Browser with http://YOUIPADDRESS:4040
