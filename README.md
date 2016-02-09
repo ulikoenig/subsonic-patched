@@ -14,7 +14,7 @@ docker build -t ulikoenig/subsonic-patch https://raw.githubusercontent.com/uliko
 ## Run Container
 
 ```
-$ docker run -d --net=host -p 4040:4040 -p 9412:9412 -v /var/lib/subsonic:/data:rw -v /mnt/harddrive/Medien:/Medien:ro  ulikoenig/subsonic-patch
+$ docker run -d --net=host -p 4040:4040 -p 4050:4050 -p 9412:9412 -e SSL=yes -v /var/lib/subsonic:/data -v /mnt/harddrive/Medien:/media:ro  ulikoenig/subsonic_patched
 ```
 I used
 ``` /var/lib/subsonic ```
@@ -26,9 +26,6 @@ My media is stored in
 Please change this paths how you like it.
 
 The Parameter ``` "--net=host" ``` is important to give subsonic access to the real external IP. Without this, Sonos support will not work, even if ports are open, because subsonic tells Sonos to make calls to 172.xx.xx.xx IP-adresses.
-
-The Parameter ``` "--e LOCALIP=172.1.2.3" ``` can be used to set the IP manually, when the docker container is started.
-
 
 ## Finally:
 
