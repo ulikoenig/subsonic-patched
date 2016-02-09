@@ -1,6 +1,6 @@
 FROM phusion/baseimage:0.9.18
 
-MAINTAINER Vedran Vekić <inti.pacha@no.gmail.spam> (@u98)
+MAINTAINER Uli König <docker@ulikoenig.de.nospam> (@u98)
 
 ENV	JAVA_HOME /usr/lib/jvm/java-8-oracle
 
